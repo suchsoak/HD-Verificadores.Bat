@@ -1,12 +1,18 @@
 @echo off
 date /t
-
-
-@echo Maquina: %computername%   Usuario:%username% 
-
+@echo -----
+@echo Maquina: %computername% 
+@echo Usuario: %username% 
+@echo Sistema: %OS% 
+@echo Arquitetura: %PROCESSOR_ARCHITECTURE%
+@echo Pasta: %SYSTEMROOT%
+@echo -----
+@echo informacoes de disco
+wmic diskdrive list brief
+@echo -----
 @echo::::::::::::::::::::::::::::::::::::::::::::
-@echo:: * 1. Verificar discos
-@echo:: * 2. Sair do terminal 
+@echo:: [*] 1. Verificar discos
+@echo:: [*] 2. Sair do terminal 
 @echo::::::::::::::::::::::::::::::::::::::::::::
 
 set /p escolha= escolha uma opcao:
@@ -50,8 +56,8 @@ cls
 @echo::::::::::::::::::::::::::::::::::::::::::::-- 
 
 @echo::::::::::::::::::::::::::::::::::::::::::::
-@echo:: * 3. Executar o comando chkdsk /r
-@echo:: * 4. Nao executar o comando
+@echo:: [*] 3. Executar o comando chkdsk /r
+@echo:: [*] 4. Nao executar o comando
 @echo:::::::::::::::::::::::::::::::::::::::::::: 
 
 set /p escolha=  escolha uma opcao: 
@@ -62,7 +68,7 @@ if %escolha% equ 4 goto escolha4
 :escolha3
 
 @echo::::::::::::::::::::::::::::::::::::::::::::
-@echo:: *Executando chkdsk /r
+@echo:: [*] Executando chkdsk /r
 @echo:::::::::::::::::::::::::::::::::::::::::::: 
 chkdsk /r
 
