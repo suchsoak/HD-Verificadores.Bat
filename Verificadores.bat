@@ -1,13 +1,8 @@
 @echo off
-date /t
-@echo -----
-@echo Maquina: %computername% 
-@echo Usuario: %username% 
-@echo Sistema: %OS% 
-@echo Arquitetura: %PROCESSOR_ARCHITECTURE%
-@echo Pasta: %SYSTEMROOT%
-@echo -----
-@echo informacoes de disco
+@echo github: https://github.com/suchsoak
+@echo.
+@echo [!] informacoes de disco:
+@echo.
 wmic diskdrive list brief
 @echo -----
 @echo::::::::::::::::::::::::::::::::::::::::::::
@@ -40,7 +35,8 @@ cls
 dism /online /cleanup-image /restorehealth
 cls
 @echo processo finalizado
-@echo comandos utilizados:
+@echo.
+@echo [!] comandos utilizados:
 @echo ############################################
 @echo --Sfc /ScanNow
 @echo --dism /online /cleanup-image /scanhealth
