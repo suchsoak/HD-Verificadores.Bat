@@ -4,6 +4,7 @@
 @echo -------------------------
 @echo github: https://github.com/suchsoak
 @echo -------------------------
+timeout 4 >null
 @echo.
 @echo [!] informacoes de disco:
 @echo.
@@ -66,7 +67,7 @@ cls
 @echo Porem nesse comando seu computador precisara ser reiniciado e isso levara tempo.
 
 @echo::::::::::::::::::::::::::::::::::::::::::::--
-@echo:: [!] AVISO depois de executar o comando e reiniciar o pc, tenha em mente que isso levara tempo, dependendo da sua maquina.
+@echo:: [!] AVISO o processo levara um tempo, dependendo da maquina.
 @echo::::::::::::::::::::::::::::::::::::::::::::-- 
 @echo.
 @echo::::::::::::::::::::::::::::::::::::::::::::
