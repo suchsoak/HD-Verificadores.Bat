@@ -1,56 +1,74 @@
 @echo off
+@echo.
+@echo.
+@echo -------------------------
 @echo github: https://github.com/suchsoak
+@echo -------------------------
 @echo.
 @echo [!] informacoes de disco:
 @echo.
 wmic diskdrive list brief
-@echo -----
+@echo.
+@echo -------------------------
+@echo [!] Certifiquese que voce esta como admin
+@echo -------------------------
+@echo.
 @echo::::::::::::::::::::::::::::::::::::::::::::
 @echo:: [*] 1. Verificar discos
 @echo:: [*] 2. Sair do terminal 
 @echo::::::::::::::::::::::::::::::::::::::::::::
-
+color 4
 set /p escolha= escolha uma opcao:
-echo ****************************
+echo -------------------------
 if %escolha% equ 1 goto escolha1 
 if %escolha% equ 2 goto escolha2
 
 :escolha1
+color 7
+cls
+@echo.
 @echo::::::::::::::::::::::::::::::::::::::::::::
-@echo:: Verificadores de disco
-@echo:: Certifiquese que voce esta como admin
+@echo:: [!] Verificadores de disco
 @echo::::::::::::::::::::::::::::::::::::::::::::
-@echo ##########################
-@echo Iniciando codigo Sfc /ScanNow
-@echo ##########################
+@echo.
+@echo -------------------------
+@echo  [*] Sfc /ScanNow
+@echo -------------------------
+timeout 2 >null
 Sfc /ScanNow
-@echo ##########################
-@echo Iniciando dism /online /cleanup-image /scanhealth
-@echo ##########################
+cls
+@echo.
+@echo -------------------------
+@echo  [*] dism /online /cleanup-image /scanhealth
+@echo -------------------------
+timeout 2 >null
 dism /online /cleanup-image /scanhealth
 cls
-@echo ##########################
-@echo Iniciando dism /online /cleanup-image /restorehealth
-@echo ##########################
+@echo.
+@echo -------------------------
+@echo  [*] dism /online /cleanup-image /restorehealth
+@echo -------------------------
+timeout 2 >null
 dism /online /cleanup-image /restorehealth
 cls
-@echo processo finalizado
 @echo.
-@echo [!] comandos utilizados:
-@echo ############################################
-@echo --Sfc /ScanNow
-@echo --dism /online /cleanup-image /scanhealth
-@echo --dism /online /cleanup-image /restorehealth
-@echo ############################################
-@pause
+@echo -------------------------
+@echo  [*] dism /Online /Cleanup-Image /CheckHealth
+@echo -------------------------
+timeout 2 >null
+dism /Online /Cleanup-Image /CheckHealth
+cls
+@echo.
+@echo [*] Processo Finalizado...
+@echo.
 
 @echo caso queria fazer uma verificação mais completa existe o comando chkdsk /r.
 @echo Porem nesse comando seu computador precisara ser reiniciado e isso levara tempo.
 
 @echo::::::::::::::::::::::::::::::::::::::::::::--
-@echo::AVISO depois de executar o comando e reiniciar o pc, tenha em mente que isso levara tempo, dependendo da sua maquina.
+@echo:: [!] AVISO depois de executar o comando e reiniciar o pc, tenha em mente que isso levara tempo, dependendo da sua maquina.
 @echo::::::::::::::::::::::::::::::::::::::::::::-- 
-
+@echo.
 @echo::::::::::::::::::::::::::::::::::::::::::::
 @echo:: [*] 3. Executar o comando chkdsk /r
 @echo:: [*] 4. Nao executar o comando
@@ -64,12 +82,13 @@ if %escolha% equ 4 goto escolha4
 :escolha3
 
 @echo::::::::::::::::::::::::::::::::::::::::::::
-@echo:: [*] Executando chkdsk /r
+@echo:: [*] chkdsk /r
 @echo:::::::::::::::::::::::::::::::::::::::::::: 
+timeout 3 >null
 chkdsk /r
-
+@echo.
 @echo::::::::::::::::::::::::::::::::::::::::::::
-@echo:: Por padrao, o seu computador não irar ser reiniciado depois do comando, porem e recomendavel.
+@echo:: [!] Por padrao, o seu computador não irar ser reiniciado depois do comando, porem e recomendavel.
 @echo::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -78,5 +97,9 @@ cls
 exit
 
 :escolha2
+@echo.
+@echo [*] Saindo Do Terminal...
+timeout 3 >null
+color 7
 cls
 exit
