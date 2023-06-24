@@ -19,7 +19,8 @@ Verificadores Para Profissionais De Ti. Um simples script para verificar arquivo
 <li>Sfc /ScanNow</li>
 <li>dism /online /cleanup-image /scanhealth</li>
 <li>dism /online /cleanup-image /restorehealth</li>
-<li>chkdsk /r</li>
+<li>dism /Online /Cleanup-Image /CheckHealth</li>
+<li>chkdsk /r</li>  
 </ul>
 
 ## Documentação Dos Codigos Utilizados:
