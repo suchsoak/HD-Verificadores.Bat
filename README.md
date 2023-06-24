@@ -31,5 +31,8 @@ Verificadores Para Profissionais De Ti. Um simples script para verificar arquivo
 |  chkdsk | [https://learn.microsoft.com/pt-br/windows-server/networking/technologies/netsh/netsh ](https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer)
 | Repair | [https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/windows-commands ](https://learn.microsoft.com/pt-br/windows-hardware/manufacture/desktop/repair-a-windows-image?view=windows-11)
 
-
+<h1 aling="center">
+  
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=100&color=36BCF7FFcenter=true&lines=HD+|+SSD)](https://git.io/typing-svg)
+
+</h1>
