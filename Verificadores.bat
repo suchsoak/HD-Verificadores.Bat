@@ -61,10 +61,11 @@ dism /Online /Cleanup-Image /CheckHealth
 cls
 @echo.
 @echo [*] Processo Finalizado...
+timeout 3 
 @echo.
 
-@echo caso queria fazer uma verificação mais completa existe o comando chkdsk /r.
-@echo Porem nesse comando seu computador precisara ser reiniciado e isso levara tempo.
+@echo [!] caso queria fazer uma verificacao mais completa existe o comando chkdsk /r.
+@echo [!] Porem nesse comando seu computador precisara ser reiniciado e isso levara tempo.
 
 @echo::::::::::::::::::::::::::::::::::::::::::::--
 @echo:: [!] AVISO o processo levara um tempo, dependendo da maquina.
@@ -94,6 +95,10 @@ chkdsk /r
 
 
 :escolha4 
+@echo.
+@echo [*] Saindo Do Terminal...
+timeout 3 >null
+color 7
 cls
 exit
 
